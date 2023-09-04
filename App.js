@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -9,7 +8,7 @@ import {
 } from 'react-native';
 
 
-function App(): JSX.Element {
+function App() {
 
   return (
     <SafeAreaView>
