@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 const AppNavContainer = () => {
   return (
     <NavigationContainer>
-      <Text>Hello World</Text>
+      <HomeNavigatorr />
     </NavigationContainer>
   );
 };
