@@ -1,4 +1,3 @@
-import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Text, View} from 'react-native';
 
@@ -35,10 +34,10 @@ const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
   return (
     <HomeStack.Navigator >
-      <HomeStack.Screen name="Contacts" component={Contacts}></HomeStack.Screen>
-      <HomeStack.Screen name="Contact Details" component={ContactDetails}></HomeStack.Screen>
-      <HomeStack.Screen name="Create Contact" component={CreateContact}></HomeStack.Screen>
-      <HomeStack.Screen name="Settings" component={Settings}></HomeStack.Screen>
+      <HomeStack.Screen name="Contacts" component={Contacts}/>
+      <HomeStack.Screen name="Contact Details" component={ContactDetails}/>
+      <HomeStack.Screen name="Create Contact" component={CreateContact}/>
+      <HomeStack.Screen name="Settings" component={Settings}/>
     </HomeStack.Navigator>
   );
 };
