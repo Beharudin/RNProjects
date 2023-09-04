@@ -33,8 +33,12 @@ const Settings = () => {
 const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Contacts" component={Contacts}/>
+    <HomeStack.Navigator initialRouteName='Contacts'
+    screenOptions={{
+      drawerLabel: () => null, // Hide the title for the Drawer Navigator item
+    }}>
+      <HomeStack.Screen name="Contacts" 
+      component={Contacts}/>
       <HomeStack.Screen name="Contact Details" component={ContactDetails}/>
       <HomeStack.Screen name="Create Contact" component={CreateContact}/>
       <HomeStack.Screen name="Settings" component={Settings}/>
