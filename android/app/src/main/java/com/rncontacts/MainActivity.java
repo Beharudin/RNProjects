@@ -5,6 +5,9 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 import android.os.Bundle;
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+import com.swmansion.rnscreens.RNScreensPackage;
+
 
 public class MainActivity extends ReactActivity {
 
