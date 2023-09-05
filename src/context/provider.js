@@ -7,8 +7,8 @@ import ContactsInitialState from './initialStates/ContactsInitialState';
 export const GlobalContext = createContext();
 
 const GlobalProvider = ({children}) => {
-  const {authState, authDispatch} = useReducer(auth, AuthInitialState);
-  const {contactsState, contactsDispatch} = useReducer(
+  const [authState, authDispatch] = useReducer(auth, AuthInitialState);
+  const [contactsState, contactsDispatch] = useReducer(
     contacts,
     ContactsInitialState,
   );
