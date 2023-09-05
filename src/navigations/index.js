@@ -9,7 +9,6 @@ const AppNavContainer = () => {
     authState: {isLoggedIn},
   } = useContext(GlobalContext);
 
-  console.log('isLoggedIn: ', isLoggedIn);
   return (
     <NavigationContainer>
       {isLoggedIn ? <DrawerNavigator /> : <AuthNavigator />}
