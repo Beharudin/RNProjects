@@ -5,10 +5,10 @@ import {
   CREATE_CONTACT,
   SETTINGS,
 } from '../constants/RouteNames';
-import Contacts from '../screens/contacts/Index';
-import ContactDetails from '../screens/contactDetails/Index';
-import CreateContact from '../screens/createContact/Index';
-import Settings from '../screens/settings/Index';
+import Contacts from '../screens/contacts';
+import ContactDetails from '../screens/contactDetails';
+import CreateContact from '../screens/createContact';
+import Settings from '../screens/settings';
 
 const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
