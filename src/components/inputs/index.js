@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {View, Text, TextInput} from 'react-native';
 import styles from './styles';
 import {COLORS} from '../../assets/theme/theme';
@@ -23,12 +23,9 @@ const Inputs = ({
     }
   };
   const getBorderColor = () => {
+    if (error) return COLORS.danger;
     if (focused) return COLORS.primary;
-    if (error) {
-      return COLORS.danger;
-    } else {
-      return COLORS.gray;
-    }
+    else return COLORS.gray;
   };
   return (
     <View style={styles.textInputWrapper}>
@@ -50,7 +47,7 @@ const Inputs = ({
           {...props}
         />
       </View>
-        {error && <Text style={styles.error}>{error}</Text>}
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 };
