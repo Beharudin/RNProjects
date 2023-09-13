@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import styles from './styles';
-import {COLORS} from '../../assets/theme/theme';
+import { COLORS } from '../../../assets/theme/theme';
 
 const CustomButton = ({
   title,

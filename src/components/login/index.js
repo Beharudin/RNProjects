@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import Inputs from '../../components/inputs';
-import CustomButton from '../../components/customButtons';
+import CustomButton from '../common/customButtons';
 import {Image, Text, View} from 'react-native';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import { REGISTER } from '../../constants/RouteNames';
-import Container from '../container';
+import {REGISTER} from '../../constants/RouteNames';
+import Container from '../common/container';
+import Message from '../common/message';
+import Inputs from '../common/inputs';
 
 const LoginComponent = ({
   error,
@@ -18,7 +19,6 @@ const LoginComponent = ({
 }) => {
   const {navigate} = useNavigation();
   const [isSecureEntry, setIsSecureEntry] = useState(true);
-
   return (
     <Container>
       <Image
@@ -27,9 +27,11 @@ const LoginComponent = ({
         source={require('../../assets/images/logo.png')}
         style={styles.logoImage}
       />
+
       <View>
         <Text style={styles.title}>Welcome to RNContacts</Text>
         <Text style={styles.subTitle}>Please login here</Text>
+
         <View style={styles.form}>
           {justSignedUp && (
             <Message
@@ -44,25 +46,46 @@ const LoginComponent = ({
               danger
               message="invalid credentials"
             />
-          )}
+           )} 
 
           {error?.error && <Message danger onDismiss message={error?.error} />}
+
           <Inputs
             label="Username"
-            // value={username}
-            // onChangeText={text => onChangeText(text)}
+            iconPosition="right"
             placeholder="Enter Username"
+            value={form.userName || null}
+            onChangeText={value => {
+              onChange({name: 'userName', value});
+            }}
           />
+
           <Inputs
             label="Password"
-            // value={password}
-            // onChangeText={text => onChangePassword(text)}
             placeholder="Enter Password"
-            icon={<Text>Show</Text>}
-            iconPosition={'right'}
-            secureTextEntry={true}
+            secureTextEntry={isSecureEntry}
+            icon={
+              <TouchableOpacity
+                onPress={() => {
+                  setIsSecureEntry(prev => !prev);
+                }}>
+                <Text>{isSecureEntry ? 'Show' : 'Hide'}</Text>
+              </TouchableOpacity>
+            }
+            iconPosition="right"
+            onChangeText={value => {
+              onChange({name: 'password', value});
+            }}
           />
-          <CustomButton primary title={'Submit'} />
+
+          <CustomButton
+            disabled={loading}
+            onPress={onSubmit}
+            loading={loading}
+            primary
+            title="Submit"
+          />
+
           <View style={styles.createSection}>
             <Text style={styles.infoText}>Need a new account?</Text>
             <TouchableOpacity

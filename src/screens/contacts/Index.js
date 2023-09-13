@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import Container from "../../components/container";
+import Container from "../../components/common/container";
 
 const Contacts = () => {
   return (

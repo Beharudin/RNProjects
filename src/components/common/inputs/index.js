@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput} from 'react-native';
 import styles from './styles';
-import {COLORS} from '../../assets/theme/theme';
+import { COLORS } from '../../../assets/theme/theme';
 
 const Inputs = ({
   onChangeText,
