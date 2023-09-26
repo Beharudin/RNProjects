@@ -83,7 +83,7 @@ const LoginComponent = ({
             onPress={onSubmit}
             loading={loading}
             primary
-            title="Submit"
+            title="Login"
           />
 
           <View style={styles.createSection}>

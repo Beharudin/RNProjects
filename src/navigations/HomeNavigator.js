@@ -15,7 +15,11 @@ const HomeNavigator = () => {
   
   return (
     <HomeStack.Navigator initialRouteName={CONTACT_LIST}>
-      <HomeStack.Screen name={CONTACT_LIST} component={Contacts} />
+      <HomeStack.Screen name={CONTACT_LIST} component={Contacts} options={{HeaderLeft: () => (
+        <TouchableOpacity>
+          <Text>Nav</Text>
+        </TouchableOpacity>
+      ),}}/>
       <HomeStack.Screen name={CONTACT_DETAIL} component={ContactDetails} />
       <HomeStack.Screen name={CREATE_CONTACT} component={CreateContact} />
       <HomeStack.Screen name={SETTINGS} component={Settings} />
