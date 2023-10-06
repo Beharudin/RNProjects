@@ -2,7 +2,7 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeNavigator from './HomeNavigator';
 import SideMenu from './SideMenu';
-import { GlobalContext } from '../context/Provider';
+import {GlobalContext} from '../context/Provider';
 
 const Drawer = createDrawerNavigator();
 const getDrawerContent = (navigation, authDispatch) => {
