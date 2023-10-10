@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import colors from '../../../assets/theme/colors';
+import { COLORS } from '../../../assets/theme/theme';
 
 export default StyleSheet.create({
   wrapper: {
@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
 
   modalView: {
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
     marginHorizontal: 20,
     borderRadius: 4,
     minHeight: 300,
@@ -44,12 +44,12 @@ export default StyleSheet.create({
     width: 5,
     height: 5,
     borderRadius: 100,
-    backgroundColor: colors.grey,
+    backgroundColor: COLORS.grey,
   },
 
   footerSeparator: {
     height: 0.5,
-    backgroundColor: colors.grey,
+    backgroundColor: COLORS.grey,
   },
 
   footerItems: {

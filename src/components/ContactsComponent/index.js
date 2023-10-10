@@ -12,7 +12,7 @@ import {s} from 'react-native-size-matters';
 import Icon from '../common/Icon';
 import styles from './styles';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
-import Message from '../common/message';
+import Message from '../common/Message';
 import { COLORS } from '../../assets/theme/theme';
 import { CONTACT_DETAIL, CREATE_CONTACT } from '../../constants/RouteNames';
 

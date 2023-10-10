@@ -1,5 +1,5 @@
 import {Text, View} from 'react-native';
-import Container from '../../components/common/container';
+import Container from '../../components/common/Container';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {useContext, useEffect, useRef, useState} from 'react';
 import Icon from '../../components/common/Icon';

@@ -6,8 +6,8 @@ import Input from '../common/Input';
 import styles from './styles';
 import CountryPicker from 'react-native-country-picker-modal';
 import {DEFAULT_IMAGE_URI} from '../../constants/general';
-import colors from '../../assets/theme/colors';
 import ImagePicker from '../common/ImagePicker';
+import { COLORS } from '../../assets/theme/theme';
 
 const CreateContactComponent = ({
   loading,
@@ -90,7 +90,7 @@ const CreateContactComponent = ({
           <Text style={{fontSize: 17}}>Add to favorites</Text>
 
           <Switch
-            trackColor={{false: 'blue', true: colors.primary}}
+            trackColor={{false: 'blue', true: COLORS.primary}}
             thumbColor="#FFFFFF"
             ios_backgroundColor="#3e3e3e"
             onValueChange={toggleValueChange}

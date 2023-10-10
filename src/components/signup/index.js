@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 
 import {Image, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import Message from '../common/message';
+import Message from '../common/Message';
 import styles from './styles';
 import { LOGIN } from '../../constants/RouteNames';
-import CustomButton from '../common/customButtons';
-import Container from '../common/container';
-import Inputs from '../common/inputs';
+import CustomButton from '../common/CustomButton';
+import Container from '../common/Container';
+import Inputs from '../common/Input';
 
 const RegisterComponent = ({
   onSubmit,

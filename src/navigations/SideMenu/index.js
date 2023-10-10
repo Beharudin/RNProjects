@@ -11,7 +11,7 @@ import {SETTINGS} from '../../constants/RouteNames';
 import logoutUser from '../../context/actions/auth/logoutUser';
 import styles from './styles';
 import Icon from '../../components/common/Icon';
-import Container from '../../components/common/container';
+import Container from '../../components/common/Container';
 
 const SideMenu = ({navigation, authDispatch}) => {
   const handleLogout = () => {

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import colors from '../../assets/theme/colors';
+import { COLORS } from '../../assets/theme/theme';
 
 export default StyleSheet.create({
   container: {flex: 1, backgroundColor: 'white'},
@@ -12,7 +12,7 @@ export default StyleSheet.create({
   },
 
   chooseText: {
-    color: colors.primary,
+    color: COLORS.primary,
     textAlign: 'center',
   },
 });

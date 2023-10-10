@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import CustomButton from '../common/customButtons';
+import CustomButton from '../common/CustomButton';
 import {Image, Text, View} from 'react-native';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {REGISTER} from '../../constants/RouteNames';
-import Container from '../common/container';
-import Message from '../common/message';
-import Inputs from '../common/inputs';
+import Container from '../common/Container';
+import Message from '../common/Message';
+import Inputs from '../common/Input';
 
 const LoginComponent = ({
   error,
